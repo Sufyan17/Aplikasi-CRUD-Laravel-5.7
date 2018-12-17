@@ -7,11 +7,11 @@
             <h2>Add New Product</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a> <!--lihat pada href disana jika kita klik Back maka akan menuju ke route-->
         </div>
     </div>
 </div>
-
+<!--jika kita mengkosongkan form maka perintah ini akan dijlnkan-->
 @if ($errors->any())
     <div class="alert alert-danger">
         <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -22,8 +22,8 @@
         </ul>
     </div>
 @endif
-
-<form action="{{ route('products.store') }}" method="POST">
+<!--jika tdk terjd error maka perintah ini akan dijlnkan-->
+<form action="{{ route('products.store') }}" method="POST"> 
     @csrf
 
      <div class="row">

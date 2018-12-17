@@ -39,7 +39,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'name' => 'required', //required untuk validasi form name tdk boleh kosong 
             'detail' => 'required',
         ]);
 
